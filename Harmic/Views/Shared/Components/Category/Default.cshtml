@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Harmic.Models.TbCategory>
+@foreach (var item in Model)
+{
+    <li class="nav-item" role="presentation">
+    <a class="active" id="all-items-tab" data-bs-toggle="tab" href="#all-items" role="tab" aria-controls="all-items" aria-selected="true">
+        <div class="product-tab-icon">
+            <img src="~/assets/images/product/icon/1.png" alt="Product Icon">
+        </div>
+        @item.Title
+    </a>
+</li>}
