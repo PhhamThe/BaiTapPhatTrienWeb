@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Harmic.Models.TbProduct>
+@foreach (var item in Model.Take(3))
+{
+    <div class="swiper-slide">
+        <div class="product-list-item">
+            <div class="product-img img-zoom-effect">
+                <a href="single-product.html">
+                    <img class="img-full" src="@item.Image" alt="Product Images">
+                </a>
+            </div>
+            <div class="product-content">
+                <a class="product-name" href="single-product.html">@item.Title</a>
+                <div class="price-box pb-1">
+                    <span class="new-price">$80.00</span>
+                </div>
+                <div class="rating-box-wrap">
+                    <div class="rating-box">
+                        <ul>
+                            @for (int i = 0; i < item.Star; i++)
+                            {
+                                <li><i class="pe-7s-star"></i></li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="product-add-action">
+                        <ul>
+                            <li>
+                                <a href="cart.html">
+                                    <i class="pe-7s-cart"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
