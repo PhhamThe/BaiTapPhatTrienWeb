@@ -8,7 +8,6 @@ namespace Harmic
         {
             services.AddControllersWithViews();
         }
-        //Pham Hong the
         public void Configure(IApplicationBuilder app, Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
         {
             if (env.IsDevelopment())
